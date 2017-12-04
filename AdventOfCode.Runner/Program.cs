@@ -10,8 +10,17 @@ namespace AdventOfCode.Runner
     {
         static void Main(string[] args)
         {
-            Day2Solver day2Solver = new Day2Solver();
-            day2Solver.Solve();
+            var wrappers = new List<SolverWrapper>()
+            {
+                new SolverWrapper(new Day1Solver()),
+                new SolverWrapper(new Day2Solver()),
+            };
+
+
+            foreach (SolverWrapper wrapper in wrappers)
+            {
+                wrapper.Solve();
+            }
 
             Console.ReadLine();
         }

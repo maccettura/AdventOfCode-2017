@@ -2,6 +2,9 @@
 {
     public interface ISolver
     {
-        void Solve();
+        int Day { get; }
+        string Title { get; }
+        void SolvePart1();
+        void SolvePart2();
     }
 }

@@ -4,14 +4,30 @@ using System.Linq;
 
 namespace AdventOfCode
 {
+    ///<Summary>
+    ///<see href="https://adventofcode.com/2017/day/1">Inverse Captcha</see>
+    ///</Summary>
     public class Day1Solver : ISolver
     {
-        public void Solve()
-        {
-            int[] inputArray = ConvertStringToIntArray(Properties.Resources.Day1);
+        public int Day => 1;
 
-            Console.WriteLine(Part1(inputArray));
-            Console.WriteLine(Part2(inputArray));
+        public string Title => "Inverse Captcha";
+
+        private readonly int[] _inputArray;
+
+        public Day1Solver()
+        {
+            _inputArray = ConvertStringToIntArray(Properties.Resources.Day1);
+        }
+
+        public void SolvePart1()
+        {
+            Console.WriteLine(Part1(_inputArray));
+        }
+
+        public void SolvePart2()
+        {
+            Console.WriteLine(Part2(_inputArray));
         }
 
         private static int[] ConvertStringToIntArray(string input)

@@ -4,17 +4,26 @@ using System.Linq;
 
 namespace AdventOfCode
 {
+    ///<Summary>
+    ///<see href="https://adventofcode.com/2017/day/2">Corruption Checksum</see>
+    ///</Summary>
     public class Day2Solver : ISolver
     {
-        public void Solve()
-        {
-            string result = Properties.Resources.Day2;
+        public int Day => 2;
 
-            Console.WriteLine(CalculateCheckSumPart1(result));
-            Console.WriteLine(CalculateCheckSumPart2(result));
+        public string Title => "Corruption Checksum";
+
+        public void SolvePart1()
+        {
+            Console.WriteLine(Part1(Properties.Resources.Day2));
         }
 
-        private static int CalculateCheckSumPart1(string input)
+        public void SolvePart2()
+        {
+            Console.WriteLine(Part2(Properties.Resources.Day2));
+        }
+
+        private static int Part1(string input)
         {
             var sum = 0;
             foreach (string row in input.Split(new[] { Environment.NewLine }, StringSplitOptions.None))
@@ -34,7 +43,7 @@ namespace AdventOfCode
             return sum;
         }
 
-        private static int CalculateCheckSumPart2(string input)
+        private static int Part2(string input)
         {
             var sum = 0;
             foreach (string row in input.Split(new[] { Environment.NewLine }, StringSplitOptions.None))
@@ -54,7 +63,6 @@ namespace AdventOfCode
             }
             return sum;
         }
-
 
         private static IEnumerable<Tuple<int, int>> GetPermutations(int[] items)
         {

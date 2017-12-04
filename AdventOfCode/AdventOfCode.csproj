@@ -49,6 +49,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SolverWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Input\Day2.txt">
