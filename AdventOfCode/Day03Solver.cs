@@ -34,16 +34,7 @@ namespace AdventOfCode
 
         private static int Part2(int input)
         {
-            var squareRoot = 3;
-            var gridLevelCounter = 1;
-            while (squareRoot * squareRoot < input)
-            {
-                squareRoot += 2;
-                gridLevelCounter++;
-            }
-
-            Tuple<int, int> coordinate = GetCoordinate(squareRoot, gridLevelCounter, input);
-            return coordinate != null ? GetManhattanDistanceFromCenter(coordinate.Item1, coordinate.Item2) : 0;
+            throw new NotImplementedException();
         }
 
         private static int GetManhattanDistanceFromCenter(int x, int y)
