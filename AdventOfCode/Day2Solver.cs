@@ -30,9 +30,11 @@ namespace AdventOfCode
             {
                 string[] columns = row.Split(null);
 
+                //Instead of parsing each string into an int, I just pad and sort as a string
                 int maxlen = columns.Max(x => x.Length);
                 columns = columns.OrderBy(x => x.PadLeft(maxlen, '0')).ToArray();
 
+                //Here we only have to parse the two we know are the min and max
                 var min = 0;
                 var max = 0;
                 if (int.TryParse(columns[0], out min) && int.TryParse(columns[columns.Length - 1], out max))
@@ -48,7 +50,7 @@ namespace AdventOfCode
             var sum = 0;
             foreach (string row in input.Split(new[] { Environment.NewLine }, StringSplitOptions.None))
             {
-                int[] columns = row.Split(null).Select(int.Parse).OrderByDescending(x => x).ToArray();
+                int[] columns = row.Split(null).Select(int.Parse).ToArray();
 
                 IEnumerable<Tuple<int, int>> result2 = GetPermutations(columns);
 
@@ -66,6 +68,10 @@ namespace AdventOfCode
 
         private static IEnumerable<Tuple<int, int>> GetPermutations(int[] items)
         {
+            //According to the rules the two numbers have to divide evenly into one another and must be a whole number
+            //Order from highest to lowest, then find all the possible combinations
+            //Item1 will always be higher than Item2 in the resulting Tuple
+            items = items.OrderByDescending(x => x).ToArray();
             for (var o = 0; o < items.Length; o++)
             {
                 for (int i = o + 1; i < items.Length; i++)
