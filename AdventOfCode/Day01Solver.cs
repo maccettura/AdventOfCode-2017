@@ -7,7 +7,7 @@ namespace AdventOfCode
     ///<Summary>
     ///<see href="https://adventofcode.com/2017/day/1">Inverse Captcha</see>
     ///</Summary>
-    public class Day1Solver : ISolver
+    public class Day01Solver : ISolver
     {
         public int Day => 1;
 
@@ -15,7 +15,7 @@ namespace AdventOfCode
 
         private readonly int[] _inputArray;
 
-        public Day1Solver()
+        public Day01Solver()
         {
             _inputArray = ConvertStringToIntArray(Properties.Resources.Day1);
         }

@@ -7,7 +7,7 @@ namespace AdventOfCode
     ///<Summary>
     ///<see href="https://adventofcode.com/2017/day/2">Corruption Checksum</see>
     ///</Summary>
-    public class Day2Solver : ISolver
+    public class Day02Solver : ISolver
     {
         public int Day => 2;
 

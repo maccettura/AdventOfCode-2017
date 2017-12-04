@@ -40,8 +40,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Day1Solver.cs" />
-    <Compile Include="Day2Solver.cs" />
+    <Compile Include="Day09Solver.cs" />
+    <Compile Include="Day10Solver.cs" />
+    <Compile Include="Day01Solver.cs" />
+    <Compile Include="Day02Solver.cs" />
+    <Compile Include="Day03Solver.cs" />
+    <Compile Include="Day04Solver.cs" />
+    <Compile Include="Day05Solver.cs" />
+    <Compile Include="Day06Solver.cs" />
+    <Compile Include="Day07Solver.cs" />
+    <Compile Include="Day08Solver.cs" />
+    <Compile Include="Day11Solver.cs" />
+    <Compile Include="Day12Solver.cs" />
+    <Compile Include="Day13Solver.cs" />
+    <Compile Include="Day14Solver.cs" />
+    <Compile Include="Day15Solver.cs" />
+    <Compile Include="Day16Solver.cs" />
+    <Compile Include="Day17Solver.cs" />
+    <Compile Include="Day18Solver.cs" />
+    <Compile Include="Day19Solver.cs" />
+    <Compile Include="Day20Solver.cs" />
+    <Compile Include="Day21Solver.cs" />
+    <Compile Include="Day22Solver.cs" />
+    <Compile Include="Day23Solver.cs" />
+    <Compile Include="Day24Solver.cs" />
+    <Compile Include="Day25Solver.cs" />
     <Compile Include="ISolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
