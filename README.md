@@ -3,7 +3,7 @@
 1. [Day 1](https://github.com/maccettura/adventofcode/blob/master/AdventOfCode/Day01Solver.cs)
 2. [Day 2](https://github.com/maccettura/adventofcode/blob/master/AdventOfCode/Day02Solver.cs)
 3. [Day 3](https://github.com/maccettura/adventofcode/blob/master/AdventOfCode/Day03Solver.cs)
-4. [Day 4](https://github.com/maccettura/adventofcode/blob/master/AdventOfCode/Day034Solver.cs)
+4. [Day 4](https://github.com/maccettura/adventofcode/blob/master/AdventOfCode/Day04Solver.cs)
 5. [Day 5](https://github.com/maccettura/adventofcode/blob/master/AdventOfCode/Day05Solver.cs)
 6. [Day 6](https://github.com/maccettura/adventofcode/blob/master/AdventOfCode/Day06Solver.cs)
 7. [Day 7](https://github.com/maccettura/adventofcode/blob/master/AdventOfCode/Day07Solver.cs)
