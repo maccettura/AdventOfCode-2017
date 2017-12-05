@@ -9,50 +9,32 @@ namespace AdventOfCode
 
         public string Title => "A Maze of Twisty Trampolines, All Alike";
 
+        int[] Parse(string input) => input.Split(new[] { Environment.NewLine }, StringSplitOptions.None)
+                                        .Select(int.Parse)
+                                        .ToArray();
+
         public void SolvePart1()
         {
-            int[] intArray = Properties.Resources.Day5.Split(new[] { Environment.NewLine }, StringSplitOptions.None)
-                .Select(int.Parse)
-                .ToArray();
-            Console.WriteLine(MazeSolver(intArray, GetPart1Offset));
+            Console.WriteLine(MazeSolver(Parse(Properties.Resources.Day5), i => i + 1));
         }
 
         public void SolvePart2()
         {
-            int[] intArray = Properties.Resources.Day5.Split(new[] { Environment.NewLine }, StringSplitOptions.None)
-                .Select(int.Parse)
-                .ToArray();
-            Console.WriteLine(MazeSolver(intArray, GetPart2Offset));
+            Console.WriteLine(MazeSolver(Parse(Properties.Resources.Day5), i => i + (i > 2 ? -1 : 1)));
         }
 
         private static int MazeSolver(int[] input, Func<int, int> getOffset)
         {
             var counter = 0;
             var currentIndex = 0;
-            try
+            while (currentIndex >= 0 && currentIndex < input.Length)
             {
-                while (true)
-                {
-                    int value = input[currentIndex];
-                    input[currentIndex] = getOffset(value);
-                    currentIndex += value;
-                    counter++;
-                }
+                int value = input[currentIndex];
+                input[currentIndex] = getOffset(value);
+                currentIndex += value;
+                counter++;
             }
-            catch (IndexOutOfRangeException exception)
-            {
-                return counter;
-            }
-        }
-
-        private static int GetPart1Offset(int value)
-        {
-            return value + 1;
-        }
-
-        private static int GetPart2Offset(int value)
-        {
-            return value >= 3 ? value - 1 : value + 1;
+            return counter;
         }
     }
 }
