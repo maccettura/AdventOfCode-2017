@@ -4,33 +4,34 @@ using System.Linq;
 
 namespace AdventOfCode
 {
+    ///<Summary>
+    ///<see href="https://adventofcode.com/2017/day/4">High-Entropy Passphrases</see>
+    ///</Summary>
     public class Day04Solver : ISolver
     {
         public int Day => 4;
 
         public string Title => "High-Entropy Passphrases";
 
+        private readonly string[] _inputArray;
+
+        public Day04Solver()
+        {
+            _inputArray = Properties.Resources.Day4.Split(new[] {Environment.NewLine}, StringSplitOptions.None);
+        }
+
         public void SolvePart1()
         {
-            Console.WriteLine(Part1(Properties.Resources.Day4));
+            int count = _inputArray
+                .Select(s => s.Split(null))
+                .Count(parts => parts.Length == parts.Distinct().Count());
+            Console.WriteLine(count);
         }
 
         public void SolvePart2()
         {
-            Console.WriteLine(Part2(Properties.Resources.Day4));
-        }
-
-        private static int Part1(string input)
-        {
-            return input.Split(new[] {Environment.NewLine}, StringSplitOptions.None)
-                .Select(s => s.Split(null))
-                .Count(parts => parts.Length == parts.Distinct().Count());
-        }
-
-        private static int Part2(string input)
-        {
             var validCount = 0;
-            foreach (string inputSplit in input.Split(new[] {Environment.NewLine}, StringSplitOptions.None))
+            foreach (string inputSplit in _inputArray)
             {
                 var set = new HashSet<string>();
                 var isValid = true;
@@ -50,9 +51,9 @@ namespace AdventOfCode
                 if (isValid)
                 {
                     validCount++;
-                }                
+                }
             }
-            return validCount;
+            Console.WriteLine(validCount);
         }
     }
 }

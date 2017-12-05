@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace AdventOfCode
 {
+    ///<Summary>
+    ///<see href="https://adventofcode.com/2017/day/5">A Maze of Twisty Trampolines, All Alike</see>
+    ///</Summary>
     public class Day05Solver : ISolver
     {
         public int Day => 5;

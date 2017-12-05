@@ -13,20 +13,17 @@ namespace AdventOfCode
 
         public string Title => "Corruption Checksum";
 
+        private readonly string[] _inputArray;
+
+        public Day02Solver()
+        {
+            _inputArray = Properties.Resources.Day2.Split(new[] {Environment.NewLine}, StringSplitOptions.None);
+        }
+
         public void SolvePart1()
         {
-            Console.WriteLine(Part1(Properties.Resources.Day2));
-        }
-
-        public void SolvePart2()
-        {
-            Console.WriteLine(Part2(Properties.Resources.Day2));
-        }
-
-        private static int Part1(string input)
-        {
             var sum = 0;
-            foreach (string row in input.Split(new[] { Environment.NewLine }, StringSplitOptions.None))
+            foreach (string row in _inputArray)
             {
                 string[] columns = row.Split(null);
 
@@ -35,38 +32,36 @@ namespace AdventOfCode
                 columns = columns.OrderBy(x => x.PadLeft(maxlen, '0')).ToArray();
 
                 //Here we only have to parse the two we know are the min and max
-                var min = 0;
-                var max = 0;
-                if (int.TryParse(columns[0], out min) && int.TryParse(columns[columns.Length - 1], out max))
+                if (int.TryParse(columns[0], out int min) && int.TryParse(columns[columns.Length - 1], out int max))
                 {
                     sum += max - min;
                 }
             }
-            return sum;
+            Console.WriteLine(sum);
         }
 
-        private static int Part2(string input)
+        public void SolvePart2()
         {
             var sum = 0;
-            foreach (string row in input.Split(new[] { Environment.NewLine }, StringSplitOptions.None))
+            foreach (string row in _inputArray)
             {
                 int[] columns = row.Split(null).Select(int.Parse).ToArray();
 
-                IEnumerable<Tuple<int, int>> result2 = GetPermutations(columns);
+                IEnumerable<(int, int)> result2 = GetPermutations(columns);
 
-                foreach (Tuple<int, int> r in result2)
+                foreach ((int highNum, int lowNum) in result2)
                 {
-                    if (r.Item1 % r.Item2 == 0)
+                    if (highNum % lowNum == 0)
                     {
-                        sum += r.Item1 / r.Item2;
+                        sum += highNum / lowNum;
                         break;
                     }
                 }
             }
-            return sum;
+            Console.WriteLine(sum);
         }
 
-        private static IEnumerable<Tuple<int, int>> GetPermutations(int[] items)
+        private static IEnumerable<(int, int)> GetPermutations(int[] items)
         {
             //According to the rules the two numbers have to divide evenly into one another and must be a whole number
             //Order from highest to lowest, then find all the possible combinations
@@ -76,7 +71,7 @@ namespace AdventOfCode
             {
                 for (int i = o + 1; i < items.Length; i++)
                 {
-                    yield return new Tuple<int, int>(items[o], items[i]);
+                    yield return (items[o], items[i]);
                 }
             }
         }
