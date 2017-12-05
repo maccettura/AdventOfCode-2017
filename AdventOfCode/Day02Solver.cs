@@ -22,43 +22,44 @@ namespace AdventOfCode
 
         public void SolvePart1()
         {
-            var sum = 0;
-            foreach (string row in _inputArray)
-            {
-                string[] columns = row.Split(null);
-
-                //Instead of parsing each string into an int, I just pad and sort as a string
-                int maxlen = columns.Max(x => x.Length);
-                columns = columns.OrderBy(x => x.PadLeft(maxlen, '0')).ToArray();
-
-                //Here we only have to parse the two we know are the min and max
-                if (int.TryParse(columns[0], out int min) && int.TryParse(columns[columns.Length - 1], out int max))
-                {
-                    sum += max - min;
-                }
-            }
-            Console.WriteLine(sum);
+            Console.WriteLine(_inputArray.Sum(SumPart1));
         }
 
         public void SolvePart2()
         {
-            var sum = 0;
-            foreach (string row in _inputArray)
+            Console.WriteLine(_inputArray.Sum(SumPart2));
+        }
+
+        private static int SumPart1(string row)
+        {
+            string[] columns = row.Split(null);
+
+            //Instead of parsing each string into an int, I just pad and sort as a string
+            int maxlen = columns.Max(x => x.Length);
+            columns = columns.OrderBy(x => x.PadLeft(maxlen, '0')).ToArray();
+
+            //Here we only have to parse the two we know are the min and max
+            if (int.TryParse(columns[0], out int min) && int.TryParse(columns[columns.Length - 1], out int max))
             {
-                int[] columns = row.Split(null).Select(int.Parse).ToArray();
+                return max - min;
+            }
+            return 0;
+        }
 
-                IEnumerable<(int, int)> result2 = GetPermutations(columns);
+        private static int SumPart2(string row)
+        {
+            int[] columns = row.Split(null).Select(int.Parse).ToArray();
 
-                foreach ((int highNum, int lowNum) in result2)
+            IEnumerable<(int, int)> result2 = GetPermutations(columns);
+
+            foreach ((int highNum, int lowNum) in result2)
+            {
+                if (highNum % lowNum == 0)
                 {
-                    if (highNum % lowNum == 0)
-                    {
-                        sum += highNum / lowNum;
-                        break;
-                    }
+                    return highNum / lowNum;
                 }
             }
-            Console.WriteLine(sum);
+            return 0;
         }
 
         private static IEnumerable<(int, int)> GetPermutations(int[] items)
