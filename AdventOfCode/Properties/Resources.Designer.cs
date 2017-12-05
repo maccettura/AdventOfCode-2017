@@ -84,5 +84,24 @@ namespace AdventOfCode.Properties {
                 return ResourceManager.GetString("Day2", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to kvvfl kvvfl olud wjqsqa olud frc
+        ///slhm rdfm yxb rsobyt rdfm
+        ///pib wzfr xyoakcu zoapeze rtdxt rikc jyeps wdyo hawr xyoakcu hawr
+        ///ismtq qwoi kzt ktgzoc gnxblp dzfayil ftfx asscba ionxi dzfayil qwoi
+        ///dzuhys kfekxe nvdhdtj hzusdy xzhehgc dhtvdnj oxwlvef
+        ///gxg qahl aaipx tkmckn hcsuhy jsudcmy kcefhpn kiasaj tkmckn
+        ///roan kqnztj edc zpjwb
+        ///yzc roc qrygby rsvts nyijgwr xnpqz
+        ///jqgj hhgtw tmychia whkm vvxoq tfbzpe ska ldjmvmo
+        ///nyeeg omn geyen ngyee rcjt rjuxh
+        ///qpq udci tnp fdfk kffd eyzvmg ufppf wfuodj toamfn tkze jzsb [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Day4 {
+            get {
+                return ResourceManager.GetString("Day4", resourceCulture);
+            }
+        }
     }
 }
