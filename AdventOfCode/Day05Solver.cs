@@ -12,7 +12,7 @@ namespace AdventOfCode
 
         public string Title => "A Maze of Twisty Trampolines, All Alike";
 
-        int[] Parse(string input) => input.Split(new[] { Environment.NewLine }, StringSplitOptions.None)
+        private static int[] Parse(string input) => input.Split(new[] { Environment.NewLine }, StringSplitOptions.None)
                                         .Select(int.Parse)
                                         .ToArray();
 

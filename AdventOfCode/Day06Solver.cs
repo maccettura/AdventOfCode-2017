@@ -4,47 +4,43 @@ using System.Linq;
 
 namespace AdventOfCode
 {
+    ///<Summary>
+    ///<see href="https://adventofcode.com/2017/day/6">A Maze of Twisty Trampolines, All Alike</see>
+    ///</Summary>
     public class Day06Solver : ISolver
     {
         public int Day => 6;
 
         public string Title => "Memory Reallocation";
 
-        public void SolvePart1()
-        {           
-            int[] banks = Properties.Resources.Day6.Split(null).Select(int.Parse).ToArray();
-            var set = new HashSet<string>();
+        private static int[] Parse(string input) => input.Split(null).Select(int.Parse).ToArray();
 
-            while (true)
-            {
-                string hashString = GetHashString(banks);
-                if (set.Contains(hashString))
-                {
-                    break;                    
-                }
-                set.Add(hashString);
-                banks = RedistributeBlocks(banks);
-            }
-            Console.WriteLine(set.Count);
+        public void SolvePart1()
+        {
+            Tuple<ICollection<string>, int[]> returnVal = BankProcessor(Parse(Properties.Resources.Day6), new HashSet<string>());
+            Console.WriteLine(returnVal.Item1.Count);
         }
 
         public void SolvePart2()
         {
-            int[] banks = Properties.Resources.Day6.Split(null).Select(int.Parse).ToArray();
-            var list = new List<string>();
+            Tuple<ICollection<string>, int[]> returnVal = BankProcessor(Parse(Properties.Resources.Day6), new HashSet<string>());
 
+            Console.WriteLine(returnVal.Item1.Count - returnVal.Item1.ToList().IndexOf(GetHashString(returnVal.Item2)));
+        }
+
+        private static Tuple<ICollection<string>, int[]> BankProcessor(int[] banks, ICollection<string> seenCollection)
+        {
             while (true)
             {
                 string hashString = GetHashString(banks);
-                if (list.Contains(hashString))
+                if (seenCollection.Contains(hashString))
                 {
                     break;
                 }
-                list.Add(GetHashString(banks));
+                seenCollection.Add(GetHashString(banks));
                 banks = RedistributeBlocks(banks);
             }
-
-            Console.WriteLine(list.Count - list.IndexOf(GetHashString(banks)));
+            return new Tuple<ICollection<string>, int[]>(seenCollection, banks);
         }
 
         private static int[] RedistributeBlocks(int[] banks)
