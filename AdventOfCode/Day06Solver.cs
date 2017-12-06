@@ -17,18 +17,18 @@ namespace AdventOfCode
 
         public void SolvePart1()
         {
-            Tuple<ICollection<string>, int[]> returnVal = BankProcessor(Parse(Properties.Resources.Day6), new HashSet<string>());
-            Console.WriteLine(returnVal.Item1.Count);
+            (ICollection<string> seenCollection, int[] banks) = BankProcessor(Parse(Properties.Resources.Day6), new HashSet<string>());
+            Console.WriteLine(seenCollection.Count);
         }
 
         public void SolvePart2()
         {
-            Tuple<ICollection<string>, int[]> returnVal = BankProcessor(Parse(Properties.Resources.Day6), new HashSet<string>());
+            (ICollection<string> seenCollection, int[] banks) = BankProcessor(Parse(Properties.Resources.Day6), new List<string>());
 
-            Console.WriteLine(returnVal.Item1.Count - returnVal.Item1.ToList().IndexOf(GetHashString(returnVal.Item2)));
+            Console.WriteLine(seenCollection.Count - seenCollection.ToList().IndexOf(GetHashString(banks)));
         }
 
-        private static Tuple<ICollection<string>, int[]> BankProcessor(int[] banks, ICollection<string> seenCollection)
+        private static (ICollection<string> seenCollection, int[] banks) BankProcessor(int[] banks, ICollection<string> seenCollection)
         {
             while (true)
             {
@@ -40,7 +40,7 @@ namespace AdventOfCode
                 seenCollection.Add(GetHashString(banks));
                 banks = RedistributeBlocks(banks);
             }
-            return new Tuple<ICollection<string>, int[]>(seenCollection, banks);
+            return (seenCollection, banks);
         }
 
         private static int[] RedistributeBlocks(int[] banks)
