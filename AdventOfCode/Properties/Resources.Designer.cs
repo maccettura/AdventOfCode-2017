@@ -226,5 +226,14 @@ namespace AdventOfCode.Properties {
                 return ResourceManager.GetString("Day5", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0	5	10	0	11	14	13	4	11	8	8	7	1	4	12	11.
+        /// </summary>
+        public static string Day6 {
+            get {
+                return ResourceManager.GetString("Day6", resourceCulture);
+            }
+        }
     }
 }
