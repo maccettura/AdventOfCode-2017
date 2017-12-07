@@ -63,9 +63,9 @@ namespace AdventOfCode.Properties {
         /// <summary>
         ///   Looks up a localized string similar to 32941994713271959948248321975648598766826381888897682988942438326656546814128868622345259915532765786412655899591784142183893293614966739916146736263445521794139955622668181383723932139661431249144693976925872511126632178628792332267635339111288933545363532138471222514638578941598198287248279695764321918477877727328812668754697211893318822281465768329213146382213173932564719985981172896326846633552738459839338457217134978117669953677958579652221836687655174542633541111348413346313451115961316827261965747631 [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string Day1 {
+        public static string Day01 {
             get {
-                return ResourceManager.GetString("Day1", resourceCulture);
+                return ResourceManager.GetString("Day01", resourceCulture);
             }
         }
         
@@ -79,9 +79,9 @@ namespace AdventOfCode.Properties {
         ///1870	170	167	176	306	1909	1825	1709	168	1400	359	817	1678	1718	1594	1552
         ///98	81	 [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string Day2 {
+        public static string Day02 {
             get {
-                return ResourceManager.GetString("Day2", resourceCulture);
+                return ResourceManager.GetString("Day02", resourceCulture);
             }
         }
         
@@ -98,9 +98,9 @@ namespace AdventOfCode.Properties {
         ///nyeeg omn geyen ngyee rcjt rjuxh
         ///qpq udci tnp fdfk kffd eyzvmg ufppf wfuodj toamfn tkze jzsb [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string Day4 {
+        public static string Day04 {
             get {
-                return ResourceManager.GetString("Day4", resourceCulture);
+                return ResourceManager.GetString("Day04", resourceCulture);
             }
         }
         
@@ -221,18 +221,50 @@ namespace AdventOfCode.Properties {
         ///-60
         ///- [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string Day5 {
+        public static string Day05 {
             get {
-                return ResourceManager.GetString("Day5", resourceCulture);
+                return ResourceManager.GetString("Day05", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to 0	5	10	0	11	14	13	4	11	8	8	7	1	4	12	11.
         /// </summary>
-        public static string Day6 {
+        public static string Day06 {
             get {
-                return ResourceManager.GetString("Day6", resourceCulture);
+                return ResourceManager.GetString("Day06", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to mypyemv (1058) -&gt; tdssotr, pebnvks, zaulju
+        ///snslv (48)
+        ///aytbgf (30)
+        ///mkcrsy (42)
+        ///shwcd (42)
+        ///muwcoy (63)
+        ///dabfreg (49)
+        ///iblvv (68)
+        ///qqircn (401)
+        ///pwpnfx (67)
+        ///tlnztuz (60)
+        ///ctglahh (17)
+        ///pjkgn (170) -&gt; pstttg, xdkoxrg, cvuvxi
+        ///ulasjv (114) -&gt; tkeney, zaffbku
+        ///ojoim (139) -&gt; obebr, zxwlsj
+        ///vhxxnj (109) -&gt; ooaouu, vraxbmd
+        ///blbjzdr (40)
+        ///iuctosc (12) -&gt; bqmayvq, yjzvbcb, takuy, qlsfhyp
+        ///mfafdfn (73)
+        ///egfrye (72) -&gt; uwxizpk, igbamrm
+        ///cqokt (1487) -&gt; sjmfsib, ubspq, wsaugv
+        ///ekorcyg (67)
+        ///sfyxd (83)
+        ///trkiub (65) [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Day07 {
+            get {
+                return ResourceManager.GetString("Day07", resourceCulture);
             }
         }
     }

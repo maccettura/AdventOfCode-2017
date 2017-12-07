@@ -10,7 +10,7 @@ namespace AdventOfCode
     {
         public int Day => 8;
 
-        public string Title => throw new NotImplementedException();
+        public string Title => "";
 
         public void SolvePart1()
         {

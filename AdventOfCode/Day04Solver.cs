@@ -17,7 +17,7 @@ namespace AdventOfCode
 
         public Day04Solver()
         {
-            _inputArray = Properties.Resources.Day4.Split(new[] {Environment.NewLine}, StringSplitOptions.None);
+            _inputArray = Properties.Resources.Day04.Split(new[] {Environment.NewLine}, StringSplitOptions.None);
         }
 
         public void SolvePart1()

@@ -18,12 +18,12 @@ namespace AdventOfCode
 
         public void SolvePart1()
         {
-            Console.WriteLine(MazeSolver(Parse(Properties.Resources.Day5), i => i + 1));
+            Console.WriteLine(MazeSolver(Parse(Properties.Resources.Day05), i => i + 1));
         }
 
         public void SolvePart2()
         {
-            Console.WriteLine(MazeSolver(Parse(Properties.Resources.Day5), i => i + (i > 2 ? -1 : 1)));
+            Console.WriteLine(MazeSolver(Parse(Properties.Resources.Day05), i => i + (i > 2 ? -1 : 1)));
         }
 
         private static int MazeSolver(int[] input, Func<int, int> getOffset)

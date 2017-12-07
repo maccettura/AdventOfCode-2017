@@ -77,7 +77,7 @@
     <Compile Include="SolverWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Input\Day2.txt">
+    <EmbeddedResource Include="Input\Day02.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -86,17 +86,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Input\Day1.txt">
+    <EmbeddedResource Include="Input\Day01.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Input\Day4.txt">
+    <EmbeddedResource Include="Input\Day04.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Input\Day5.txt" />
+    <Content Include="Input\Day07.txt" />
+    <Content Include="Input\Day05.txt" />
+    <Content Include="Input\Day06.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -118,19 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Day1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Input\Day1.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="Day01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Input\Day01.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="Day2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Input\Day2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="Day02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Input\Day02.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="Day4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Input\Day4.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="Day04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Input\Day04.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="Day5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Input\Day5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="Day05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Input\Day05.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="Day6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Input\Day6.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <data name="Day06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Input\Day06.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Day07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Input\Day07.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

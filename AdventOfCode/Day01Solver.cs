@@ -16,7 +16,7 @@ namespace AdventOfCode
 
         public Day01Solver()
         {
-            _inputArray = Properties.Resources.Day1.Select(x => (int) char.GetNumericValue(x)).ToArray();
+            _inputArray = Properties.Resources.Day01.Select(x => (int) char.GetNumericValue(x)).ToArray();
         }
 
         public void SolvePart1()

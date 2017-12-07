@@ -17,13 +17,13 @@ namespace AdventOfCode
 
         public void SolvePart1()
         {
-            (ICollection<string> seenCollection, int[] banks) = BankProcessor(Parse(Properties.Resources.Day6), new HashSet<string>());
+            (ICollection<string> seenCollection, int[] banks) = BankProcessor(Parse(Properties.Resources.Day06), new HashSet<string>());
             Console.WriteLine(seenCollection.Count);
         }
 
         public void SolvePart2()
         {
-            (ICollection<string> seenCollection, int[] banks) = BankProcessor(Parse(Properties.Resources.Day6), new List<string>());
+            (ICollection<string> seenCollection, int[] banks) = BankProcessor(Parse(Properties.Resources.Day06), new List<string>());
 
             Console.WriteLine(seenCollection.Count - seenCollection.ToList().IndexOf(GetHashString(banks)));
         }
