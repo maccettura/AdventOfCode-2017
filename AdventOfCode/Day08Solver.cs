@@ -12,15 +12,15 @@ namespace AdventOfCode
 
         public void SolvePart1()
         {
-            Console.WriteLine(GetAnswers().maxValueAtEnd);
+            Console.WriteLine(GetMaxValues().maxValueAtEnd);
         }
 
         public void SolvePart2()
         {
-            Console.WriteLine(GetAnswers().maxValueAtAnyPoint);
+            Console.WriteLine(GetMaxValues().maxValueAtAnyPoint);
         }
 
-        private static (int maxValueAtEnd, int maxValueAtAnyPoint) GetAnswers()
+        private static (int maxValueAtEnd, int maxValueAtAnyPoint) GetMaxValues()
         {
             string[] inputArray =
                 Properties.Resources.Day08.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
@@ -78,19 +78,14 @@ namespace AdventOfCode
 
         private static (string name, bool increase, int value, string compareTo, Func<Dictionary<string, int>, string, bool> expression) ParseString(string input)
         {
-            string[] split = input.Split(new[] { "if" }, StringSplitOptions.RemoveEmptyEntries);
+            string[] split = input.Split(null).Where(x => !string.IsNullOrEmpty(x)).ToArray();
+            string compareTo = split[4];
+            int expressionValue = int.Parse(split[6]);
+            int value = int.Parse(split[2]);
 
-            string[] expressionArray = split[1].Split(null).Where(x => !string.IsNullOrEmpty(x)).ToArray();
-            string compareTo = expressionArray[0];
-            int expressionValue = int.Parse(expressionArray[2]);
-
-            string[] instructions = split[0].Split(null).Where(x => !string.IsNullOrEmpty(x)).ToArray();
-
-            int value = int.Parse(instructions[2]);
-
-            return string.Compare(instructions[1], "inc", true) == 0 
-                ? (instructions[0], true, value, compareTo, ParseExpression(expressionArray[1], expressionValue)) 
-                : (instructions[0], false, value, compareTo, ParseExpression(expressionArray[1], expressionValue));
+            return string.Compare(split[1], "inc", true) == 0 
+                ? (split[0], true, value, compareTo, ParseExpression(split[5], expressionValue)) 
+                : (split[0], false, value, compareTo, ParseExpression(split[5], expressionValue));
         }
     }
 }
