@@ -10,7 +10,7 @@ namespace AdventOfCode
     {
         public int Day => 11;
 
-        public string Title => "";
+        public string Title => "Hex Ed";
 
         public void SolvePart1()
         {

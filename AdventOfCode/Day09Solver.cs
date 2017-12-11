@@ -10,7 +10,7 @@ namespace AdventOfCode
     {
         public int Day => 9;
 
-        public string Title => "";
+        public string Title => "Stream Processing";
 
         public void SolvePart1()
         {

@@ -10,7 +10,7 @@ namespace AdventOfCode
     {
         public int Day => 10;
 
-        public string Title => "";
+        public string Title => "Knot Hash";
 
         public void SolvePart1()
         {

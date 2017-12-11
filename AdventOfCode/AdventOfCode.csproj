@@ -100,6 +100,7 @@
     <Content Include="Input\Day05.txt" />
     <Content Include="Input\Day06.txt" />
     <Content Include="Input\Day08.txt" />
+    <Content Include="Input\Day09.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
