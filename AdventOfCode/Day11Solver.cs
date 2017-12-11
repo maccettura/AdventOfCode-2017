@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventOfCode
 {
@@ -14,12 +11,54 @@ namespace AdventOfCode
 
         public void SolvePart1()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(GetSteps().minSteps);
         }
 
         public void SolvePart2()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(GetSteps().maxSteps);
+        }
+
+        private static (int maxSteps, int minSteps) GetSteps()
+        {
+            var counts = new Dictionary<string, int>();
+
+            var maxSteps = 0;
+            foreach (string s in Properties.Resources.Day11.Split(','))
+            {
+                if (counts.ContainsKey(s))
+                {
+                    counts[s]++;
+                }
+                else
+                {
+                    counts.Add(s, 0);
+                }
+
+                int distance = Calculate(counts);
+
+                if (distance > maxSteps)
+                {
+                    maxSteps = distance;
+                }                
+            }
+
+            return (maxSteps, Calculate(counts));
+        }
+
+        private static int Calculate(IReadOnlyDictionary<string, int> counts)
+        {
+            try
+            {
+                int x = Math.Abs(counts["se"] + counts["ne"] - (counts["sw"] + counts["nw"]));
+                int y = Math.Abs(counts["n"] + counts["nw"] - (counts["s"] + counts["se"]));
+                int z = Math.Abs(counts["s"] + counts["sw"] - (counts["n"] + counts["ne"]));
+                return (x + y + z) / 2;
+            }
+            catch
+            {
+                return 0;
+            }
         }
     }
 }

@@ -297,5 +297,14 @@ namespace AdventOfCode.Properties {
                 return ResourceManager.GetString("Day08", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to n,nw,nw,sw,s,sw,sw,s,s,s,s,s,ne,s,ne,se,se,sw,s,se,se,se,n,se,se,ne,se,ne,n,ne,ne,sw,ne,ne,se,ne,ne,ne,sw,ne,ne,ne,n,ne,n,n,se,ne,ne,n,sw,n,ne,n,ne,n,ne,n,n,n,n,n,n,n,ne,n,n,sw,nw,n,nw,n,nw,n,n,nw,s,nw,nw,n,n,nw,se,nw,nw,sw,n,n,n,nw,nw,n,nw,nw,nw,nw,nw,ne,nw,nw,nw,sw,sw,nw,nw,nw,ne,sw,se,n,s,nw,sw,nw,s,sw,sw,n,nw,sw,sw,nw,sw,sw,nw,nw,nw,sw,sw,sw,s,sw,se,sw,sw,ne,sw,sw,sw,ne,sw,sw,sw,nw,sw,sw,sw,sw,sw,nw,sw,se,se,nw,nw,sw,sw,sw,ne,nw,sw,n,sw,sw,sw,sw,se,sw,sw,se,sw,ne,nw,sw,sw,nw,sw,sw,sw,se,sw,s,s,s,sw,s,sw [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Day11 {
+            get {
+                return ResourceManager.GetString("Day11", resourceCulture);
+            }
+        }
     }
 }
